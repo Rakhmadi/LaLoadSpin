@@ -1,5 +1,5 @@
 # LaLoadSpin
-loading spiner cli for deno 
+loading spinner cli for deno 
 
 ```ts
 // set frame
