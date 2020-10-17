@@ -1,24 +1,24 @@
 ﻿import { cursorPrevLine, clearTerminal, clearScreen } from "https://deno.land/x/ansi/mod.ts";
 export default class LaLoad{
-   static Frame:any = ['⣾',  '⣽', '⣻', '⢿' ,'⡿','⣟','⣯','⣷']
-   static run:any = true
-   static loading(label:string = '',time:any = 100){
+   public Frame:any = ['⣾','⣽','⣻','⢿','⡿','⣟','⣯','⣷']
+   public run:any = true
+   public spinn(label:string = '',time:any = 100){
      console.log('');
       var i = 0; 
-      const interval = setInterval(function() {
-         if (LaLoad.run == true) {
-          console.log(`${cursorPrevLine()}${LaLoad.Frame[i++]} ${label}`);
+      const interval = setInterval(()=>{
+         if (this.run == true) {
+          console.log(`${cursorPrevLine()}${this.Frame[i++]} ${label}`);
          }
-      if (i == LaLoad.Frame.length) i = 0;  
+      if (i == this.Frame.length) i = 0;  
       }, time); 
-      if(LaLoad.run == false) {
+      if(this.run == false) {
          clearInterval(interval)
 
       }
    }
-   static end(){
+   public end(){
       console.log(clearScreen());
-      LaLoad.run = false
+      this.run = false
    }
    // static LoadingBar(option:Array<any> =[{"wait":1000,"persentage":true,"text":''}],dot:string = "=",bg:string = "-"){
    //        async function main() {

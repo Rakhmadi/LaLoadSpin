@@ -1,7 +1,3 @@
-# LaLoadSpin
-loading spiner cli for deno 
-
-```ts
 import LaLoad from './mod.ts'
 
 const spinn = new LaLoad()
@@ -16,4 +12,3 @@ setInterval(()=>{
     //end method
     spinn.end()
 },3000)
-```
