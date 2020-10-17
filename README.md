@@ -3,14 +3,14 @@ loading spinner cli for deno
 
 ```ts
 // set frame
-LaLoad.Frame = ['⣾',  '⣽', '⣻', '⢿' ,'⡿','⣟','⣯','⣷'] 
+LaLoad.Frame = ['⣾', '⣽', '⣻', '⢿' ,'⡿','⣟','⣯','⣷'] 
 
 //run spiner 
 
 LaLoad.loading("Loading",100)
 
+// stop spiner & clear in 3 sec
 setInterval(()=>{
-   // stop spiner & clear
    LaLoad.end()
    console.log('Done');
    
